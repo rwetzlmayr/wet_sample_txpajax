@@ -66,7 +66,7 @@ class wet_sample_txpajax
 		global $step;
 		require_privs(__CLASS__);
 
-		switch($step) {
+		switch ($step) {
 			case 'my_name_is':
 				self::my_name_is();
 				break;
@@ -93,13 +93,13 @@ class wet_sample_txpajax
 		$async_params = array(
 			'step' => 'say_hi', // This tells dispatch() which function to use as a response handler
 			'thing' => '', 		// Some response handlers may need more context which may be put in 'thing' and 'property'.
-			'property' => ''	//  We just leave them empty here, and we could omit 'thing' and 'property' as well as the core uses defaults.
+			'property' => ''	// We just leave them empty here, and we could omit 'thing' and 'property' as well as the core uses defaults.
 		);
 
-		// build a AJAX link
+		// Build a AJAX link
 		$greez = asyncHref(self::$greeting[0], $async_params);
 
-		// build the output fragment with a well-known id
+		// Build the output fragment with a well-known id
 		$patron = '<span id="my_name_output">'.self::$my_name.'</span>';
 
 		echo '<div class="txp-edit">'.n.
@@ -117,7 +117,7 @@ class wet_sample_txpajax
 			'post',
 			'async',  // IMPORTANT: 'async' is a class with a special meaning: It triggers Textpattern's AJAX bejaviour
 			'',
-			_CLASS_
+			__CLASS__
 		);
 	}
 
@@ -132,7 +132,10 @@ class wet_sample_txpajax
 		// ...further processing might go here: Database updates, input validation, ...
 		self::$my_name = $in;
 
-		// Send a javascript response to render this posted data back into the document' header.
+		// Prepare response string
+		$in = escape_js($in);
+
+		// Send a javascript response to render this posted data back into the document's headline.
 		// Find the target HTML fragment via jQuery through its selector '#my_name_output'
 		// and replace its text.
 		send_script_response(<<<EOS
