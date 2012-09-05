@@ -1,0 +1,7 @@
+h2.  Sample AJAX forms and links for Textpattern 4.5+
+
+Textpattern supports declarative AJAX forms and links. This plugin adds a new tab titled "wet_sample_ajax" under the "Extensions" tab.
+
+It renders a form with one input which is processed by an aynchronous server-side backend. The server respondes with a javascript fragment.
+
+It also renders an asynchronously processed link. Ther server responds with a plain text verb.

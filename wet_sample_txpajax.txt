@@ -1,0 +1,52 @@
+# wet_sample_txpajax v0.1
+# Sample AJAX processing for Textpattern CMS
+# Robert Wetzlmayr
+# http://wetzlmayr.com/
+
+# ......................................................................
+# This is a plugin for Textpattern - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# ......................................................................
+
+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
+fixNExQAAA==
