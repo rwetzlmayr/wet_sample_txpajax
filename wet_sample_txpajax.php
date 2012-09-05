@@ -121,6 +121,9 @@ class wet_sample_txpajax
 		);
 	}
 
+	/**
+	 * AJAX response handler for the 'my_name_is' step
+	 */
 	static function my_name_is()
 	{
 		// Grab the new name from POST data
@@ -138,6 +141,9 @@ EOS
 );
 	}
 
+	/**
+	 * AJAX response handler for the say_hi' step
+	 */
 	static function say_hi()
 	{
 		// Grab the current greeting text from $_POST['value']
