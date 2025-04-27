@@ -1,7 +1,5 @@
-h2.  Sample AJAX forms and links for Textpattern 4.5+
+h1. 301 Moved Permanently
 
-Textpattern supports declarative AJAX forms and links. This plugin adds a new tab titled "wet_sample_ajax" under the "Extensions" tab.
+The repository has been moved to https://codeberg.org/rwetzlmayr/wet_sample_txpajax.
 
-It renders a form with one input which is processed by an aynchronous server-side backend. The server respondes with a javascript fragment.
-
-It also renders an asynchronously processed link. Ther server responds with a plain text verb.
+This page is left as a placeholder to guide users to the new location.
